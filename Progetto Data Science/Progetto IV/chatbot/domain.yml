@@ -1,0 +1,79 @@
+version: "3.1"
+
+intents:
+  - inserimento_orario_v
+  - inserimento_orario_r
+  - greet
+  - goodbye
+  - get_stock_price
+  - inform_company
+  - calculate_returns
+  - calculate_volume
+  - affirm_saluto
+entities:
+  - company
+  - period
+
+slots:
+  company:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: company
+  period:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: period
+
+responses:
+  utter_greet:
+  - text: "Ciao, mi chiamo Elena, sono qui per aiutarti con informazioni sulle azioni. Puoi chiedermi il prezzo delle azioni, le ultime notizie su un'azienda o persino calcolare i rendimenti delle azioni. Come posso assisterti oggi?"
+  utter_ask_ending:
+  - text: "C'è qualcos'altro che posso fare per te?"
+
+  utter_goodbye:
+  - text: "Grazie a presto!"
+
+  utter_inserimento_orario_v:
+    - text: "Per quanti mesi vorresti effettuare il calcolo di volumi?"
+      buttons:
+        - title: "1 mese"
+          payload: "1 mese"
+        - title: "3 mesi"
+          payload: "3 mesi"
+        - title: "6 mesi"
+          payload: "6 mesi"
+        - title: "1 anno"
+          payload: "1 anno"
+        - title: "2 anni"
+          payload: "2 anni"
+      button_type: vertical
+  
+  utter_inserimento_orario_r:
+    - text: "Per quanti mesi vorresti effettuare il calcolo del rendimento?"
+      buttons:
+        - title: "1 mese"
+          payload: "1 mese"
+        - title: "3 mesi"
+          payload: "3 mesi"
+        - title: "6 mesi"
+          payload: "6 mesi"
+        - title: "1 anno"
+          payload: "1 anno"
+        - title: "2 anni"
+          payload: "2 anni"
+      button_type: vertical
+
+actions:
+- action_get_stock_price
+- action_search_news
+- utter_greet
+- utter_inserimento_orario_r
+- utter_inserimento_orario_v
+- action_calculate_returns
+- action_calculate_volume
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,40 @@
+
+version: "3.1"
+
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Saluto e Fine Conversazione
+  steps:
+  - intent: goodbye
+  - action: utter_greet  # Azione per rispondere al saluto
+  - action: utter_ask_ending  # Azione per chiedere se c'è qualcosa altro da fare
+  - intent: affirm_saluto  # L'utente conferma che non c'è altro da fare
+  - action: utter_goodbye  # Azione per salutare alla fine della conversazione
+
+- story: get stock price
+  steps:
+  - intent: get_stock_price
+  - action: action_get_stock_price
+
+- story: ricerca notizie azienda
+  steps:
+  - intent: inform_company
+  - action: action_search_news
+
+- story: calculate_returns
+  steps:
+  - intent: calculate_returns
+  - action: utter_inserimento_orario_r
+  - intent: insererimento_orario_r
+  - action: action_calculate_returns
+
+- story: calculate_volume
+  steps:
+  - intent: calculate_volume
+  - action: utter_inserimento_orario_v
+  - intent: inserimento_orario_v
+  - action: action_calculate_volume

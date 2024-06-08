@@ -1,0 +1,159 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Ciao
+    - Buongiorno
+    - Salve
+    - Saluti
+    - Buona giornata
+    - Hey
+- intent: affirm_saluto
+  examples: |
+    - Non mi serve altro
+    - No grazie
+    - No
+- intent: goodbye
+  examples: |
+    - Arrivederci
+    - A presto
+    - Ci vediamo
+    - Addio
+    - Fino alla prossima volta
+    
+
+- intent: get_stock_price
+  examples: |
+    - Qual è il prezzo delle azioni di [Apple](company)?
+    - Che valore hanno le azioni di [Tesla](company) in questo momento?
+    - Quanto costano le azioni di [Amazon](company)?
+    - Dammi il prezzo delle azioni di [Microsoft](company)
+    - Quale è il prezzo delle azioni della [Banca Monte dei Paschi di Siena](company)?
+    - Che prezzo hanno le azioni di [Netflix](company)?
+    - Qual è il valore delle azioni di [Samsung Electronics](company)?
+    - Che valore hanno le azioni della [Société Générale](company)?
+    - Qual è il prezzo delle azioni di [Alphabet](company)?
+    - Che valore hanno le azioni della [Banco Santander](company)?
+    - Qual è il prezzo delle azioni di [Alibaba Group Holding](company)?
+    - Che valore hanno le azioni della [Deutsche Bank](company)?
+    - Qual è il prezzo delle azioni di [NVIDIA](company)?
+    - Che valore hanno le azioni di [General Motors](company)?
+    - Qual è il prezzo delle azioni di [Facebook](company)?
+    - Che valore hanno le azioni della [Tesla](company)?
+    - Qual è il prezzo delle azioni di [IBM](company)?
+    - Qual è il prezzo delle azioni di [Intel](company)?
+    - Che valore hanno le azioni della [SpaceX](company)?
+    - Qual è il prezzo delle azioni di [Uber](company)?
+    - Qual è il prezzo delle azioni di [Sony](company)?
+    - Qual è il prezzo delle azioni di [AMD](company)?
+
+- intent: inform_company
+  examples: |
+    - Voglio sapere le ultime notizie su [Apple](company)
+    - Cosa c'è di nuovo su [Tesla](company)?
+    - [Microsoft](company) ha annunciato qualcosa di nuovo?
+    - Dimmi le notizie più recenti su [Amazon](company)
+    - Quali sono le notizie recenti su [Google](company)?
+    - Stai aggiornato sulle notizie riguardo a [Facebook](company)?
+    - Ho bisogno di informazioni sulle notizie relative a [Netflix](company)
+    - Puoi cercare le ultime notizie su [IBM](company)?
+    - Mostrami le notizie più recenti su [Intel](company)
+    - Quali sono le notizie su [Samsung](company)?
+    - Dimmi le ultime notizie riguardo a [Twitter](company)
+    - Voglio leggere le notizie più recenti su [Nvidia](company)
+    - [AMD](company) ha annunciato qualcosa di interessante?
+    - Puoi cercare notizie su [SpaceX](company)?
+    - Dimmi le notizie attuali su [Uber](company)
+    - Quali sono le ultime notizie su [Sony](company)?
+    - Quali sono le notizie recenti su [Alphabet](company)?
+    - Stai aggiornato sulle notizie riguardo a [Banco Santander](company)?
+    - Ho bisogno di informazioni sulle notizie relative a [Alibaba Group Holding](company)?
+    - Puoi cercare le ultime notizie su [Deutsche Bank](company)?
+    - Mostrami le notizie più recenti su [General Motors](company)
+
+- intent: calculate_returns
+  examples: |
+    - rendimento [Amazon](company)
+    - rendimenti [Amazon](company)
+    - Rendimento [Nvidia](company) 
+    - Rendimenti [Nvidia](company)
+    - [Nvidia](company) rendimento
+    - [Nvidia](company) rendimenti
+    - Calcola [Nvidia](company) rendimento
+    - Calcola [Nvidia](company) rendimenti
+    - Mostrami il rendimento di [Nvidia](company)
+    - Qual è il rendimento di [Nvidia](company) oggi?
+    - Rendimenti [Nvidia](company) ultimamente
+    - Rendiemnto guadagnato [Nvidia](company) di recente?
+    - Voglio sapere quanto ha reso [Nvidia](company)
+    - Dammi il rendimento per [Nvidia](company)
+    - Mostrami il rendimento per [Nvidia](company)
+    - Calcola i rendimenti delle azioni di [Apple](company) negli ultimi [3 mesi](period)
+    - Rendimenti delle azioni di [Tesla](company) nell'ultimo [anno](period)
+    - Qual è il rendimento delle azioni di [Microsoft](company) negli ultimi [6 mesi](period)?
+    - Rendimento delle azioni di [Amazon](company) nell'ultimo [mese](period)
+    - Calcola il rendimento delle azioni di [Google](company) nell'ultimo [2 mesi](period)
+    - Voglio conoscere i rendimenti delle azioni di [Facebook](company) negli ultimi [3 mesi](period)
+    - Qual è il rendimento delle azioni di [Netflix](company) nell'ultimo [anno](period)?
+    - Rendimenti delle azioni di [IBM](company) nell'ultimo [mese](period)
+    - Rendimenti delle azioni di [Intel](company) nell'ultimo [anno](period)
+    - Calcola il rendimento delle azioni di [SpaceX](company) negli ultimi [6 mesi](period)
+    - Voglio conoscere il rendimento delle azioni di [Uber](company) nell'ultimo [anno](period)
+    - Qual è il rendimento delle azioni di [Sony](company) nell'ultimo [mese](period)?
+    - Calcola i rendimenti delle azioni di [AMD](company) nell'ultimo [anno](period)
+    - Rendimento delle azioni di [Alphabet](company) nell'ultimo [anno](period)
+    - Calcola il rendimento delle azioni di [Banco Santander](company) negli ultimi [3 mesi](period)
+    - Voglio conoscere i rendimenti delle azioni di [Alibaba Group Holding](company) nell'ultimo [mese](period)
+    - Dammici i rendimento delle azioni di [Tesla](company) negli ultimi [1 anno](period)
+    - Qual è il rendimento delle azioni di [Apple](company) nell'ultimo [2 anni](period)?
+    - Rendimenti delle azioni di [Microsoft](company) nell'ultimo [2 anni](period)
+    - Rendimento delle azioni di [Amazon](company) negli ultimi [1 anno](period)
+
+
+- intent: calculate_volume
+  examples: |
+    - Volume [Amazon](company)
+    - volume [nasdaq](company)
+    - [nasdaq](company) volume
+    - [tesla](company) volume
+    - Volumi [Nvidia](company)
+    - calcola i volumi di [Nvidia](company)
+    - Calcola il volume di scambi delle azioni di [Apple](company) negli ultimi [3 mesi](period)
+    - Calcola i volumi di scambi delle azioni di [Apple](company) negli ultimi [3 mesi](period)
+    - Volume di scambi delle azioni di [Tesla](company) nell'ultimo [anno](period)
+    - Qual è il volume di scambi delle azioni di [Microsoft](company) negli ultimi [6 mesi](period)?
+    - Quali sono i volumi di scambi delle azioni di [Microsoft](company) negli ultimi [6 mesi](period)?
+    - Volume di scambi delle azioni di [Amazon](company) nell'ultimo [mese](period)
+    - Calcola il volume di scambi delle azioni di [Google](company) nell'ultimo [trimestre](period)
+    - Voglio conoscere il volume di scambi delle azioni di [Facebook](company) negli ultimi [3 mesi](period)
+    - Qual è il volume di scambi delle azioni di [Netflix](company) nell'ultimo [anno](period)?
+    - Volumi di scambi delle azioni di [IBM](company) nell'ultimo [mese](period)
+    - Volume di scambi delle azioni di [Intel](company) nell'ultimo [tre mesi](period)
+    - Calcola il volumi di scambi delle azioni di [SpaceX](company) negli ultimi [6 mesi](period)
+    - Voglio conoscere il volume di scambi delle azioni di [Uber](company) nell'ultimo [anno](period)
+    - Qual è il volume di scambi delle azioni di [Sony](company) nell'ultimo [mese](period)?
+    - Calcola il volume di scambi delle azioni di [AMD](company) nell'ultimo [3 mese](period)
+    - Volume di scambi delle azioni di [Alphabet](company) nell'ultimo [anno](period)
+    - Calcola il volumi di scambi delle azioni di [Banco Santander](company) negli ultimi [3 mesi](period)
+    - Voglio conoscere il volume di scambi delle azioni di [Alibaba Group Holding](company) nell'ultimo [mese](period)
+    - Dimmi il volume di scambi delle azioni di [Tesla](company) negli ultimi [7 mesi](period)
+    - Qual è il volumi di scambi delle azioni di [Apple](company) nell'ultimo [anno](period)?
+    - Volume di scambi delle azioni di [Microsoft](company) nell'ultimo [2 anni](period)
+    - Calcola il volume di scambi delle azioni di [Amazon](company) negli ultimi [1 anno](period)
+
+- intent: inserimento_orario_r
+  examples: |
+    - 1 mese
+    - 3 mesi
+    - 6 mesi
+    - 1 anno
+    - 2 anni
+
+- intent: inserimento_orario_v
+  examples: |
+    - 1 mese
+    - 3 mesi
+    - 6 mesi
+    - 1 anno
+    - 2 anni
